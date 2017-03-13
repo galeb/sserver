@@ -53,13 +53,13 @@ func main() {
 
 	h := func(ctx *fasthttp.RequestCtx) {
 		switch string(ctx.Path()) {
-		case "/1m":
+		case "/1m", "/1m.ghtml":
 			fmt.Fprintf(ctx, r1m)
-		case "/13k":
+		case "/13k", "/13k.ghtml":
 			fmt.Fprintf(ctx, r13k)
-		case "/1b":
+		case "/1b", "/1b.ghtml":
 			fmt.Fprintf(ctx, "A")
-		case "/delay":
+		case "/delay", "/delay.ghtml":
 			doneCh := make(chan struct{})
 			go func() {
 				time.Sleep(time.Millisecond * time.Duration(*delay))
@@ -70,7 +70,7 @@ func main() {
 			case <-doneCh:
 				fmt.Fprintf(ctx, *response)
 			}
-		case "/range":
+		case "/range", "/range.ghtml":
 			doneCh := make(chan struct{})
 			go func() {
 				rand.Seed(time.Now().Unix())
@@ -83,7 +83,7 @@ func main() {
 			case <-doneCh:
 				fmt.Fprintf(ctx, *response)
 			}
-		case "/timefile":
+		case "/timefile", "/timefile.ghtml":
 			doneCh := make(chan struct{})
 			go func() {
 				rand.Seed(time.Now().Unix())
