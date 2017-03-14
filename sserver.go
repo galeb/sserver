@@ -96,6 +96,9 @@ func main() {
 			case <-doneCh:
 				fsHandler(ctx)
 			}
+		case "/checkgaleb":
+		  // healthcheck for multicontent
+			fmt.Fprintf(ctx, "WORKING")
 		case "/":
 			fmt.Fprintf(ctx, "/1b /13k /1m /delay /range /timefile\n")
 		default:
