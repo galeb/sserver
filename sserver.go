@@ -31,7 +31,7 @@ var (
 var src = rand.NewSource(time.Now().UnixNano())
 var r13k = RandStringBytesMaskImprSrc(13 * 1024)
 var r1m = RandStringBytesMaskImprSrc(1024 * 1024)
-var timeList = [26]int{5, 5, 5, 5, 5, 10, 10, 10, 10, 10, 5, 5, 5, 5, 5, 10, 10, 10, 10, 10, 50, 50, 100, 10000, 20000}
+var timeList = [26]int{5, 5, 5, 5, 5, 10, 10, 10, 10, 10, 5, 5, 5, 5, 5, 10, 10, 10, 10, 10, 50, 50, 100, 500, 1000}
 
 func main() {
 	flag.Parse()
