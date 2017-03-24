@@ -1,0 +1,1 @@
+web: ./sserver -compress true
