@@ -1,7 +1,7 @@
 {
-	"ImportPath": "github.com/galeb/sserver",
+	"ImportPath": "github.com/tuxmonteiro/sserver",
 	"GoVersion": "go1.8",
-	"GodepVersion": "v75",
+	"GodepVersion": "v74",
 	"Deps": [
 		{
 			"ImportPath": "github.com/klauspost/compress/flate",
